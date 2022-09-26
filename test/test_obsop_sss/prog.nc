@@ -1,0 +1,1 @@
+../../mom6/obsop/prog.nc

@@ -1,0 +1,1 @@
+../../obs/SMAP_L3_SSS_20220105_8DAYS_V5.0.nc
