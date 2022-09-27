@@ -5,9 +5,9 @@ option(TEST_OBSOP "run test for obsop" OFF)
 option(TEST_LETKF "run test for letkf" OFF)
 set (MODEL "mom6")
 
-set (DEFAULT_OBSOP_DIR "./")
-if (NOT OBSOP_DIR)
-    set (OBSOP_DIR ${DEFAULT_OBSOP_DIR})
+set (DEFAULT_EXECUTABLE_DIR "./")
+if (NOT EXECUTABLE_DIR)
+    set (EXECUTABLE_DIR ${DEFAULT_EXECUTABLE_DIR})
 endif()
 
 
@@ -19,7 +19,7 @@ if (TEST_OBSOP)
     set(test_name test_obsop_sst_geo_msg01)
     add_test(
             NAME ${test_name}
-            COMMAND ./${test_name}.sh ${OBSOP_DIR} ${MODEL}
+            COMMAND ./${test_name}.sh ${EXECUTABLE_DIR} ${MODEL}
             WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/test/test_obsop_sst_geo)
     set_tests_properties(${test_name}
             PROPERTIES PASS_REGULAR_EXPRESSION "Test passed")
@@ -28,7 +28,7 @@ if (TEST_OBSOP)
     set(test_name test_obsop_sst_geo_g16_abi)
     add_test(
             NAME ${test_name}
-            COMMAND ./${test_name}.sh ${OBSOP_DIR} ${MODEL}
+            COMMAND ./${test_name}.sh ${EXECUTABLE_DIR} ${MODEL}
             WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/test/test_obsop_sst_geo)
     set_tests_properties(${test_name}
             PROPERTIES PASS_REGULAR_EXPRESSION "Test passed")
@@ -38,7 +38,7 @@ if (TEST_OBSOP)
 #    set(test_name test_obsop_sss_l2)
 #    add_test(
 #            NAME ${test_name}
-#            COMMAND ./${test_name}.sh ${OBSOP_DIR} ${MODEL}
+#            COMMAND ./${test_name}.sh ${EXECUTABLE_DIR} ${MODEL}
 #            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/test/test_obsop_sss)
 #    set_tests_properties(${test_name}
 #            PROPERTIES PASS_REGULAR_EXPRESSION "Test passed")
@@ -48,7 +48,7 @@ if (TEST_OBSOP)
 #    set(test_name test_obsop_sss_l3)
 #    add_test(
 #            NAME ${test_name}
-#            COMMAND ./${test_name}.sh ${OBSOP_DIR} ${MODEL}
+#            COMMAND ./${test_name}.sh ${EXECUTABLE_DIR} ${MODEL}
 #            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/test/test_obsop_sss)
 #    set_tests_properties(${test_name}
 #            PROPERTIES PASS_REGULAR_EXPRESSION "Test passed")
