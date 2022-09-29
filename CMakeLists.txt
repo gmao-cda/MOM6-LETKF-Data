@@ -15,6 +15,14 @@ enable_testing()
 
 
 if (TEST_OBSOP)
+#    # obsop_sst::AVHRR
+#    set(test_name test_obsop_sst)
+#    add_test(
+#            NAME ${test_name}
+#            COMMAND ./${test_name}.sh ${EXECUTABLE_DIR} ${MODEL}
+#            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/test/test_obsop_sst)
+#    set_tests_properties(${test_name}
+ 
     # obsop_sst_geostaionary::MSG01
     set(test_name test_obsop_sst_geo_msg01)
     add_test(
