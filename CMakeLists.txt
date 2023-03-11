@@ -42,24 +42,24 @@ if (TEST_OBSOP)
             PROPERTIES PASS_REGULAR_EXPRESSION "Test passed")
 
 
-#    # obsop_sss::L2 SMAP SSS
-#    set(test_name test_obsop_sss_l2)
-#    add_test(
-#            NAME ${test_name}
-#            COMMAND ./${test_name}.sh ${EXECUTABLE_DIR} ${MODEL}
-#            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/test/test_obsop_sss)
-#    set_tests_properties(${test_name}
-#            PROPERTIES PASS_REGULAR_EXPRESSION "Test passed")
-# 
-#
-#    # obsop_sss::L3 SMAP SSS
-#    set(test_name test_obsop_sss_l3)
-#    add_test(
-#            NAME ${test_name}
-#            COMMAND ./${test_name}.sh ${EXECUTABLE_DIR} ${MODEL}
-#            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/test/test_obsop_sss)
-#    set_tests_properties(${test_name}
-#            PROPERTIES PASS_REGULAR_EXPRESSION "Test passed")
+    # obsop_sss::L2 SMAP SSS
+    set(test_name test_obsop_sss_l2)
+    add_test(
+            NAME ${test_name}
+            COMMAND ./${test_name}.sh ${EXECUTABLE_DIR} ${MODEL}
+            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/test/test_obsop_sss)
+    set_tests_properties(${test_name}
+            PROPERTIES PASS_REGULAR_EXPRESSION "Test passed")
+ 
+
+    # obsop_sss::L3 SMAP SSS
+    set(test_name test_obsop_sss_l3)
+    add_test(
+            NAME ${test_name}
+            COMMAND ./${test_name}.sh ${EXECUTABLE_DIR} ${MODEL}
+            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/test/test_obsop_sss)
+    set_tests_properties(${test_name}
+            PROPERTIES PASS_REGULAR_EXPRESSION "Test passed")
 
 
 endif()
